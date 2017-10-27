@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demo.ares.com.a10086msghelper.MainActivity">
+
+    <TextView
+        android:text="指令列表：请用英文逗号分隔开"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目标号码" />
+
+            <EditText
+                android:id="@+id/targetEt"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="请输入目标号码"
+                android:text="10086" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/commandEt"
+            android:hint="请输入指令列表，请用英文逗号分隔开"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="start|top" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="开始发送指令" />
+        <FrameLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="以下是发送记录"
+                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/clearBtn"
+                android:layout_gravity="end"
+                android:text="清理记录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <ListView
+            android:id="@+id/historyListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>
